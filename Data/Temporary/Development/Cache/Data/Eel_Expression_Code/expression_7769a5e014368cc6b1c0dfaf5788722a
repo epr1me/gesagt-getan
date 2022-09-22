@@ -1,0 +1,1 @@
+return function ($context) {return $context->wrap(array())->push($context->getAndWrap('this')->getAndWrap('twitter'))->push($context->getAndWrap('this')->getAndWrap('facebook'))->push($context->getAndWrap('this')->getAndWrap('instagram'))->push($context->getAndWrap('this')->getAndWrap('youTube'))->push($context->getAndWrap('this')->getAndWrap('linkedIn'));};

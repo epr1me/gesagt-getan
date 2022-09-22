@@ -1,0 +1,10 @@
+##
+# "Image Rounded" element
+#
+prototype(Neos.Demo:Content.ImageRoundedLeftRight) < prototype(Neos.Neos:ContentComponent) {
+    renderer = afx`
+        <div>
+            <Neos.Demo:Content.Fragment.Image.Figure class="image-rounded_left-right" />
+        </div>
+    `
+}

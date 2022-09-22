@@ -1,0 +1,14 @@
+##
+# "Text" element
+#
+prototype(Neos.Demo:Content.TextGruppe) < prototype(Neos.Neos:ContentComponent) {
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+
+    renderer = afx`
+        <div class="text-gruppe">
+            {props.text}
+        </div>
+    `
+}

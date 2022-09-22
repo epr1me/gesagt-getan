@@ -1,0 +1,1 @@
+return function ($context) {return (($_0=(($_1=$context->callAndWrap('q', array($context->getAndWrap('node')))->callAndWrap('property', array('openGraphType'))) instanceof \Neos\Eel\Context?$_1->unwrap():$_1))?$_0:(($_2='website') instanceof \Neos\Eel\Context?$_2->unwrap():$_2));};

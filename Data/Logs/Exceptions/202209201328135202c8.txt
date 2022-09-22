@@ -1,0 +1,177 @@
+Exception in line 182 of /Applications/MAMP/htdocs/neos-example/Packages/Libraries/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php: An exception occurred in driver: SQLSTATE[HY000] [2002] Connection refused
+
+47 Doctrine\DBAL\Driver\AbstractMySQLDriver::convertException("An exception occurred in driver: SQLSTATE[HY000] [2002] Connection refused", Doctrine\DBAL\Driver\PDO\Exception)
+46 Doctrine\DBAL\DBALException::wrapException(Doctrine\DBAL\Driver\PDO\MySQL\Driver, Doctrine\DBAL\Driver\PDO\Exception, "An exception occurred in driver: SQLSTATE[HY000] [2002] Connection refused")
+45 Doctrine\DBAL\DBALException::driverException(Doctrine\DBAL\Driver\PDO\MySQL\Driver, Doctrine\DBAL\Driver\PDO\Exception)
+44 Doctrine\DBAL\Driver\PDOMySql\Driver::connect(array|8|, "root", "", array|0|)
+43 Doctrine\DBAL\Connection::connect()
+42 Doctrine\DBAL\Connection::getWrappedConnection()
+41 Doctrine\DBAL\Connection::executeQuery("SELECT n0_.persistence_object_identifier AS persis…active = ? ORDER BY n0_.site ASC, n0_.hostname ASC", array|1|, array|1|, NULL)
+40 Doctrine\ORM\Query\Exec\SingleSelectExecutor::execute(Doctrine\DBAL\Connection, array|1|, array|1|)
+39 Doctrine\ORM\Query::_doExecute()
+38 Doctrine\ORM\AbstractQuery::executeIgnoreQueryCache(NULL, 1)
+37 Doctrine\ORM\AbstractQuery::execute(NULL, 1)
+36 Doctrine\ORM\AbstractQuery::getResult()
+35 Neos\Flow\Persistence\Doctrine\Query_Original::getResult()
+34 Neos\Flow\Persistence\Doctrine\QueryResult_Original::initialize()
+33 Neos\Flow\Persistence\Doctrine\QueryResult_Original::toArray()
+32 Neos\Neos\Domain\Repository\DomainRepository_Original::findByHost("127.0.0.1", true)
+31 Neos\Neos\Domain\Repository\DomainRepository_Original::findOneByHost("127.0.0.1", true)
+30 Neos\Flow\ObjectManagement\DependencyInjection\DependencyProxy::__call("findOneByHost", array|2|)
+29 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::getSiteByHostName("127.0.0.1")
+28 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::getCurrentSite()
+27 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::buildContextFromWorkspaceNameAndDimensions("live", array|1|)
+26 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::buildContextFromRequestPath("favicon.ico")
+25 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::convertRequestPathToNode("favicon.ico")
+24 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::Neos\Neos\Routing\{closure}()
+23 Closure::__invoke()
+22 Neos\Flow\Security\Context_Original::withoutAuthorizationChecks(Closure)
+21 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::matchValue("favicon.ico")
+20 Neos\Flow\Mvc\Routing\DynamicRoutePart_Original::matchWithParameters("favicon.ico", Neos\Flow\Mvc\Routing\Dto\RouteParameters)
+19 Neos\Flow\Mvc\Routing\Route_Original::matches(Neos\Flow\Mvc\Routing\Dto\RouteContext)
+18 Neos\Flow\Mvc\Routing\Router_Original::route(Neos\Flow\Mvc\Routing\Dto\RouteContext)
+17 Neos\Flow\ObjectManagement\DependencyInjection\DependencyProxy::__call("route", array|1|)
+16 Neos\Flow\Mvc\Routing\RoutingMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+15 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+14 Neos\Neos\Routing\RequestUriHostMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+13 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+12 Neos\FluidAdaptor\Core\Widget\AjaxWidgetMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+11 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+10 Neos\Flow\Http\Middleware\SessionMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+9 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+8 Neos\Flow\Http\Middleware\MethodOverrideMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+7 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+6 Neos\Flow\Http\Middleware\TrustedProxiesMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+5 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+4 Neos\Flow\Http\Middleware\StandardsComplianceMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+3 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+2 Neos\Flow\Http\RequestHandler::handleRequest()
+1 Neos\Flow\Core\Bootstrap::run()
+
+Previous exception: Exception #2002 in line 44 of /Applications/MAMP/htdocs/neos-example/Packages/Libraries/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php: SQLSTATE[HY000] [2002] Connection refused
+
+46 Doctrine\DBAL\Driver\PDO\Exception::new(PDOException)
+45 Doctrine\DBAL\Driver\PDOConnection::__construct("mysql:host=127.0.0.1;dbname=gesagt-getan;charset=utf8mb4;", "root", "", array|0|)
+44 Doctrine\DBAL\Driver\PDOMySql\Driver::connect(array|8|, "root", "", array|0|)
+43 Doctrine\DBAL\Connection::connect()
+42 Doctrine\DBAL\Connection::getWrappedConnection()
+41 Doctrine\DBAL\Connection::executeQuery("SELECT n0_.persistence_object_identifier AS persis…active = ? ORDER BY n0_.site ASC, n0_.hostname ASC", array|1|, array|1|, NULL)
+40 Doctrine\ORM\Query\Exec\SingleSelectExecutor::execute(Doctrine\DBAL\Connection, array|1|, array|1|)
+39 Doctrine\ORM\Query::_doExecute()
+38 Doctrine\ORM\AbstractQuery::executeIgnoreQueryCache(NULL, 1)
+37 Doctrine\ORM\AbstractQuery::execute(NULL, 1)
+36 Doctrine\ORM\AbstractQuery::getResult()
+35 Neos\Flow\Persistence\Doctrine\Query_Original::getResult()
+34 Neos\Flow\Persistence\Doctrine\QueryResult_Original::initialize()
+33 Neos\Flow\Persistence\Doctrine\QueryResult_Original::toArray()
+32 Neos\Neos\Domain\Repository\DomainRepository_Original::findByHost("127.0.0.1", true)
+31 Neos\Neos\Domain\Repository\DomainRepository_Original::findOneByHost("127.0.0.1", true)
+30 Neos\Flow\ObjectManagement\DependencyInjection\DependencyProxy::__call("findOneByHost", array|2|)
+29 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::getSiteByHostName("127.0.0.1")
+28 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::getCurrentSite()
+27 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::buildContextFromWorkspaceNameAndDimensions("live", array|1|)
+26 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::buildContextFromRequestPath("favicon.ico")
+25 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::convertRequestPathToNode("favicon.ico")
+24 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::Neos\Neos\Routing\{closure}()
+23 Closure::__invoke()
+22 Neos\Flow\Security\Context_Original::withoutAuthorizationChecks(Closure)
+21 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::matchValue("favicon.ico")
+20 Neos\Flow\Mvc\Routing\DynamicRoutePart_Original::matchWithParameters("favicon.ico", Neos\Flow\Mvc\Routing\Dto\RouteParameters)
+19 Neos\Flow\Mvc\Routing\Route_Original::matches(Neos\Flow\Mvc\Routing\Dto\RouteContext)
+18 Neos\Flow\Mvc\Routing\Router_Original::route(Neos\Flow\Mvc\Routing\Dto\RouteContext)
+17 Neos\Flow\ObjectManagement\DependencyInjection\DependencyProxy::__call("route", array|1|)
+16 Neos\Flow\Mvc\Routing\RoutingMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+15 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+14 Neos\Neos\Routing\RequestUriHostMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+13 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+12 Neos\FluidAdaptor\Core\Widget\AjaxWidgetMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+11 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+10 Neos\Flow\Http\Middleware\SessionMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+9 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+8 Neos\Flow\Http\Middleware\MethodOverrideMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+7 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+6 Neos\Flow\Http\Middleware\TrustedProxiesMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+5 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+4 Neos\Flow\Http\Middleware\StandardsComplianceMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+3 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+2 Neos\Flow\Http\RequestHandler::handleRequest()
+1 Neos\Flow\Core\Bootstrap::run()
+
+Previous exception: Exception #2002 in line 40 of /Applications/MAMP/htdocs/neos-example/Packages/Libraries/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php: SQLSTATE[HY000] [2002] Connection refused
+
+46 PDO::__construct("mysql:host=127.0.0.1;dbname=gesagt-getan;charset=utf8mb4;", "root", "", array|0|)
+45 Doctrine\DBAL\Driver\PDOConnection::__construct("mysql:host=127.0.0.1;dbname=gesagt-getan;charset=utf8mb4;", "root", "", array|0|)
+44 Doctrine\DBAL\Driver\PDOMySql\Driver::connect(array|8|, "root", "", array|0|)
+43 Doctrine\DBAL\Connection::connect()
+42 Doctrine\DBAL\Connection::getWrappedConnection()
+41 Doctrine\DBAL\Connection::executeQuery("SELECT n0_.persistence_object_identifier AS persis…active = ? ORDER BY n0_.site ASC, n0_.hostname ASC", array|1|, array|1|, NULL)
+40 Doctrine\ORM\Query\Exec\SingleSelectExecutor::execute(Doctrine\DBAL\Connection, array|1|, array|1|)
+39 Doctrine\ORM\Query::_doExecute()
+38 Doctrine\ORM\AbstractQuery::executeIgnoreQueryCache(NULL, 1)
+37 Doctrine\ORM\AbstractQuery::execute(NULL, 1)
+36 Doctrine\ORM\AbstractQuery::getResult()
+35 Neos\Flow\Persistence\Doctrine\Query_Original::getResult()
+34 Neos\Flow\Persistence\Doctrine\QueryResult_Original::initialize()
+33 Neos\Flow\Persistence\Doctrine\QueryResult_Original::toArray()
+32 Neos\Neos\Domain\Repository\DomainRepository_Original::findByHost("127.0.0.1", true)
+31 Neos\Neos\Domain\Repository\DomainRepository_Original::findOneByHost("127.0.0.1", true)
+30 Neos\Flow\ObjectManagement\DependencyInjection\DependencyProxy::__call("findOneByHost", array|2|)
+29 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::getSiteByHostName("127.0.0.1")
+28 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::getCurrentSite()
+27 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::buildContextFromWorkspaceNameAndDimensions("live", array|1|)
+26 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::buildContextFromRequestPath("favicon.ico")
+25 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::convertRequestPathToNode("favicon.ico")
+24 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::Neos\Neos\Routing\{closure}()
+23 Closure::__invoke()
+22 Neos\Flow\Security\Context_Original::withoutAuthorizationChecks(Closure)
+21 Neos\Neos\Routing\FrontendNodeRoutePartHandler_Original::matchValue("favicon.ico")
+20 Neos\Flow\Mvc\Routing\DynamicRoutePart_Original::matchWithParameters("favicon.ico", Neos\Flow\Mvc\Routing\Dto\RouteParameters)
+19 Neos\Flow\Mvc\Routing\Route_Original::matches(Neos\Flow\Mvc\Routing\Dto\RouteContext)
+18 Neos\Flow\Mvc\Routing\Router_Original::route(Neos\Flow\Mvc\Routing\Dto\RouteContext)
+17 Neos\Flow\ObjectManagement\DependencyInjection\DependencyProxy::__call("route", array|1|)
+16 Neos\Flow\Mvc\Routing\RoutingMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+15 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+14 Neos\Neos\Routing\RequestUriHostMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+13 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+12 Neos\FluidAdaptor\Core\Widget\AjaxWidgetMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+11 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+10 Neos\Flow\Http\Middleware\SessionMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+9 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+8 Neos\Flow\Http\Middleware\MethodOverrideMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+7 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+6 Neos\Flow\Http\Middleware\TrustedProxiesMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+5 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+4 Neos\Flow\Http\Middleware\StandardsComplianceMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+3 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+2 Neos\Flow\Http\RequestHandler::handleRequest()
+1 Neos\Flow\Core\Bootstrap::run()
+
+
+HTTP REQUEST:
+target: /favicon.ico
+Host: 127.0.0.1:8081
+Connection: keep-alive
+sec-ch-ua: ".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+sec-ch-ua-platform: "macOS"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8081/setup/login
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8,de;q=0.7
+Cookie: Neos_Session=e7mMMhHjnr1tjG2gqJKeZrGUahYQ4pRo
+
+PHP PROCESS:
+Inode: 
+PID: 40743
+UID: 501
+GID: 20
+User: 
+
+    [array] => 
+        previousException:
+        [string] => Exception #2002 in line 44 of /Applications/MAMP/htdocs/neos-example/Packages/Libraries/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php: SQLSTATE[HY000] [2002] Connection refused
+

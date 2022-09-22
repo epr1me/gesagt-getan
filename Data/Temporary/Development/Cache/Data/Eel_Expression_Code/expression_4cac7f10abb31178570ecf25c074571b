@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('Array')->callAndWrap('join', array($context->getAndWrap('value'),', '));};

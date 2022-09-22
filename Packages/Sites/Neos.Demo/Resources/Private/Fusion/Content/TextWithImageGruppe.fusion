@@ -1,0 +1,41 @@
+##
+# "Text" element
+#
+prototype(Neos.Demo:Content.TextWithImageGruppe) < prototype(Neos.Neos:ContentComponent) {
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+    link = ${q(node).property('link')}
+    linkTarget = ${q(node).property('linkTarget') ? '_blank' : '_self'}
+    renderAsLink = ${site.context.inBackend ? false : true}
+
+    renderer = afx`
+        <a @if.render={props.renderAsLink} href={props.link} target={props.linkTarget} class="text-image_gruppe">
+            <div>
+                <Neos.Demo:Content.Fragment.Image.Figure />
+                <div class="gruppen-overlay">
+                    <div class="gruppen-overlay_text">mehr Infos</div>
+                </div>
+                <div class="text-image_gruppe_description">
+                    <h5>Gruppe</h5>
+                    {props.title}
+                    {props.text}
+                </div>
+            </div>
+        </a>
+        <div @if.render={!props.renderAsLink} class="text-image_gruppe">
+            <div>
+                <Neos.Demo:Content.Fragment.Image.Figure />
+                <div class="text-image_gruppe_description">
+                    <h5>Gruppe</h5>
+                    {props.title}
+                    {props.text}
+                </div>
+            </div>
+        </div>
+        
+    `
+}

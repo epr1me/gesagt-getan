@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('StaticResource')->callAndWrap('content', array('Neos.Demo','Public/Images/logo.svg',TRUE));};

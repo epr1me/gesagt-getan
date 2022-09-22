@@ -1,0 +1,5 @@
+return function ($context) {return $context->getAndWrap('Array')->callAndWrap('filter', array($context->getAndWrap('value'),function($x,$index) use ($context) {
+            $context = clone $context;
+            $context->push($x,"x");$context->push($index,"index");
+            return ((($_0=$context->getAndWrap('x')) instanceof \Neos\Eel\Context?$_0->unwrap():$_0))!==((($_1=$context->getAndWrap('null')) instanceof \Neos\Eel\Context?$_1->unwrap():$_1));
+        }));};

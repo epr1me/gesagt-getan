@@ -1,0 +1,1 @@
+return function ($context) {return $context->wrap(array())->push($context->callAndWrap('q', array($context->getAndWrap('documentNode')))->callAndWrap('property', array('_contextPath')));};

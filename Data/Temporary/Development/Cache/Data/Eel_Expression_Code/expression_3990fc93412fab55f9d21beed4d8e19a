@@ -1,0 +1,1 @@
+return function ($context) {return $context->wrap(array())->push('neos-login-box')->push(((($_0=$context->getAndWrap('props')->getAndWrap('backgroundImageSource')) instanceof \Neos\Eel\Context?$_0->unwrap():$_0)?('background-image-active'):($context->getAndWrap('null'))));};

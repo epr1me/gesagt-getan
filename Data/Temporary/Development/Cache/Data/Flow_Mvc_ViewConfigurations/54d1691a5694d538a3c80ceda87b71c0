@@ -1,0 +1,1 @@
+a:3:{s:13:"requestFilter";s:52:"isPackage("Neos.Neos.Ui") && isController("Backend")";s:14:"viewObjectName";s:27:"Neos\Fusion\View\FusionView";s:7:"options";a:1:{s:18:"fusionPathPatterns";a:1:{i:0;s:46:"resource://Neos.Neos.Ui/Private/Fusion/Backend";}}}0             254       

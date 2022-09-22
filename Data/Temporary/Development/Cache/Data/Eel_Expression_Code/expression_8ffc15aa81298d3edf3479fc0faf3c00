@@ -1,0 +1,1 @@
+return function ($context) {return ((($_0=$context->getAndWrap('props')->getAndWrap('defaultLocale')) instanceof \Neos\Eel\Context?$_0->unwrap():$_0))===((($_1=$context->getAndWrap('item')->getAndWrap('dimensions')->getAndWrap($context->getAndWrap('props')->getAndWrap('dimension'))->getAndWrap(0)) instanceof \Neos\Eel\Context?$_1->unwrap():$_1));};

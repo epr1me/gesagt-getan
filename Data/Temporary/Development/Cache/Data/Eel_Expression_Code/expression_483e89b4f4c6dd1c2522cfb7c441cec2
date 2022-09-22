@@ -1,0 +1,1 @@
+return function ($context) {return (($_1=(($_2=$context->getAndWrap('props')->getAndWrap('backgroundImageSource')) instanceof \Neos\Eel\Context?$_2->unwrap():$_2))?((($_3=(!(($_0=$context->getAndWrap('props')->getAndWrap('backgroundImageSourceIsWebp')) instanceof \Neos\Eel\Context?$_0->unwrap():$_0))) instanceof \Neos\Eel\Context?$_3->unwrap():$_3)):$_1);};

@@ -1,0 +1,1 @@
+return function ($context) {return (!(($_0=$context->getAndWrap('String')->callAndWrap('isBlank', array($context->getAndWrap('this')->getAndWrap('content')))) instanceof \Neos\Eel\Context?$_0->unwrap():$_0));};

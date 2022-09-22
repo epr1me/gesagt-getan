@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('Neos')->getAndWrap('Node')->callAndWrap('nearestContentCollection', array($context->getAndWrap('node'),$context->getAndWrap('this')->getAndWrap('nodePath')));};

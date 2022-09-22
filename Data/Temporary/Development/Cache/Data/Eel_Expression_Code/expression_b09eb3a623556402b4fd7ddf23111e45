@@ -1,0 +1,1 @@
+return function ($context) {return (($_0=(($_1=$context->getAndWrap('props')->getAndWrap('hasCaption')) instanceof \Neos\Eel\Context?$_1->unwrap():$_1))?((($_2=$context->getAndWrap('props')->getAndWrap('caption')) instanceof \Neos\Eel\Context?$_2->unwrap():$_2)):$_0);};

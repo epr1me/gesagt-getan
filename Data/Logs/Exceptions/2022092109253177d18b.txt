@@ -1,0 +1,124 @@
+Exception #1332493995 in line 417 of /Applications/MAMP/htdocs/neos-example/Data/Temporary/Development/Cache/Code/Flow_Object_Classes/Neos_Fusion_Core_Runtime.php: The Fusion object `Neos.Demo:Content.ArrowLink` cannot be rendered:
+					Most likely you mistyped the prototype name or did not define 
+					the Fusion prototype with `prototype(Neos.Demo:Content.ArrowLink) < prototype ...` . 
+					Other possible reasons are a missing parent-prototype or 
+					a missing `@class` annotation for prototypes without parent.
+					It is also possible your Fusion file is not read because 
+					of a missing `include:` statement.
+
+86 Neos\Fusion\Core\Runtime_Original::throwExceptionForUnrenderablePathIfNeeded("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…sion:Matcher>/element<Neos.Demo:Content.ArrowLink>", array|1|, "Exception")
+85 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…sion:Matcher>/element<Neos.Demo:Content.ArrowLink>", NULL, "Exception")
+84 Neos\Fusion\Core\Runtime_Original::render("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…sion:Matcher>/element<Neos.Demo:Content.ArrowLink>")
+83 Neos\Fusion\FusionObjects\RendererImplementation_Original::evaluate()
+82 Neos\Fusion\FusionObjects\MatcherImplementation_Original::evaluate()
+81 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\MatcherImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…eos.Neos:ContentCase>/default<Neos.Fusion:Matcher>", array|4|, array|5|)
+80 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…eos.Neos:ContentCase>/default<Neos.Fusion:Matcher>", NULL, "Exception")
+79 Neos\Fusion\Core\Runtime_Original::render("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…eos.Neos:ContentCase>/default<Neos.Fusion:Matcher>")
+78 Neos\Fusion\FusionObjects\CaseImplementation_Original::renderMatcher("default")
+77 Neos\Fusion\FusionObjects\CaseImplementation_Original::evaluate()
+76 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\CaseImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…<Neos.Neos:ContentCollectionRenderer>/itemRenderer", array|7|, array|5|)
+75 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…<Neos.Neos:ContentCollectionRenderer>/itemRenderer", NULL, "Exception")
+74 Neos\Fusion\Core\Runtime_Original::render("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…<Neos.Neos:ContentCollectionRenderer>/itemRenderer")
+73 Neos\Fusion\FusionObjects\MapImplementation_Original::evaluate()
+72 Neos\Fusion\FusionObjects\LoopImplementation_Original::evaluate()
+71 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\LoopImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma….Two>/column1<Neos.Neos:ContentCollection>/content", array|11|, array|5|)
+70 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma….Two>/column1<Neos.Neos:ContentCollection>/content", Neos\Fusion\FusionObjects\TagImplementation)
+69 Neos\Fusion\FusionObjects\AbstractFusionObject::fusionValue("content")
+68 Neos\Fusion\FusionObjects\TagImplementation_Original::getContent()
+67 Neos\Fusion\FusionObjects\TagImplementation_Original::evaluate()
+66 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\TagImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…er>/element<Neos.Demo:Content.Columns.Two>/column1", array|13|, array|5|)
+65 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…er>/element<Neos.Demo:Content.Columns.Two>/column1", NULL, "Exception")
+64 Neos\Fusion\Core\Runtime_Original::render("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…er>/element<Neos.Demo:Content.Columns.Two>/column1")
+63 Neos\Neos\View\FusionView_Original::render()
+62 Neos\Neos\Ui\Domain\Model\Feedback\Operations\RenderContentOutOfBand_Original::renderContent(Neos\Flow\Mvc\Controller\ControllerContext)
+61 Neos\Neos\Ui\Domain\Model\Feedback\Operations\RenderContentOutOfBand_Original::serializePayload(Neos\Flow\Mvc\Controller\ControllerContext)
+60 Neos\Neos\Ui\Domain\Model\AbstractFeedback::serialize(Neos\Flow\Mvc\Controller\ControllerContext)
+59 Neos\Neos\Ui\Domain\Model\Feedback\Operations\RenderContentOutOfBand_Original::serialize(Neos\Flow\Mvc\Controller\ControllerContext)
+58 Neos\Neos\Ui\Domain\Model\FeedbackCollection_Original::jsonSerialize()
+57 Neos\Flow\Mvc\View\JsonView_Original::transformValue(Neos\Neos\Ui\Domain\Model\FeedbackCollection, array|0|)
+56 Neos\Flow\Mvc\View\JsonView_Original::renderArray()
+55 Neos\Flow\Mvc\View\JsonView_Original::render()
+54 Neos\Flow\Mvc\Controller\ActionController_Original::renderView()
+53 Neos\Neos\Ui\Controller\BackendServiceController::renderView()
+52 Neos\Neos\Ui\Controller\BackendServiceController::Flow_Aop_Proxy_invokeJoinPoint(Neos\Flow\Aop\JoinPoint)
+51 Neos\Flow\Aop\Advice\AdviceChain::proceed(Neos\Flow\Aop\JoinPoint)
+50 Neos\Flow\Security\Aspect\PolicyEnforcementAspect_Original::enforcePolicy(Neos\Flow\Aop\JoinPoint)
+49 Neos\Flow\Aop\Advice\AroundAdvice::invoke(Neos\Flow\Aop\JoinPoint)
+48 Neos\Flow\Aop\Advice\AdviceChain::proceed(Neos\Flow\Aop\JoinPoint)
+47 Neos\Neos\Ui\Controller\BackendServiceController::renderView()
+46 Neos\Flow\Mvc\Controller\ActionController_Original::callActionMethod()
+45 Neos\Neos\Ui\Controller\BackendServiceController::callActionMethod()
+44 Neos\Neos\Ui\Controller\BackendServiceController::Flow_Aop_Proxy_invokeJoinPoint(Neos\Flow\Aop\JoinPoint)
+43 Neos\Flow\Aop\Advice\AdviceChain::proceed(Neos\Flow\Aop\JoinPoint)
+42 Neos\Flow\Security\Aspect\PolicyEnforcementAspect_Original::enforcePolicy(Neos\Flow\Aop\JoinPoint)
+41 Neos\Flow\Aop\Advice\AroundAdvice::invoke(Neos\Flow\Aop\JoinPoint)
+40 Neos\Flow\Aop\Advice\AdviceChain::proceed(Neos\Flow\Aop\JoinPoint)
+39 Neos\Neos\Ui\Controller\BackendServiceController::callActionMethod()
+38 Neos\Flow\Mvc\Controller\ActionController_Original::processRequest(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+37 Neos\Neos\Ui\Controller\BackendServiceController::processRequest(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+36 Neos\Neos\Ui\Controller\BackendServiceController::Flow_Aop_Proxy_invokeJoinPoint(Neos\Flow\Aop\JoinPoint)
+35 Neos\Flow\Aop\Advice\AdviceChain::proceed(Neos\Flow\Aop\JoinPoint)
+34 Neos\Flow\Security\Aspect\PolicyEnforcementAspect_Original::enforcePolicy(Neos\Flow\Aop\JoinPoint)
+33 Neos\Flow\Aop\Advice\AroundAdvice::invoke(Neos\Flow\Aop\JoinPoint)
+32 Neos\Flow\Aop\Advice\AdviceChain::proceed(Neos\Flow\Aop\JoinPoint)
+31 Neos\Neos\Ui\Controller\BackendServiceController::processRequest(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+30 Neos\Flow\Mvc\Dispatcher_Original::initiateDispatchLoop(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+29 Neos\Flow\Mvc\Dispatcher_Original::dispatch(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+28 Neos\Flow\Mvc\DispatchMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+27 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+26 Neos\Flow\Http\Middleware\SecurityEntryPointMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+25 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+24 Neos\Flow\Http\Middleware\RequestBodyParsingMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+23 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+22 Neos\Flow\Mvc\FlashMessage\FlashMessageMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+21 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+20 Neos\Flow\Http\Middleware\PoweredByMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+19 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+18 Neos\RedirectHandler\RedirectMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+17 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+16 Neos\Flow\Mvc\Routing\RoutingMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+15 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+14 Neos\Neos\Routing\RequestUriHostMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+13 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+12 Neos\FluidAdaptor\Core\Widget\AjaxWidgetMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+11 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+10 Neos\Flow\Http\Middleware\SessionMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+9 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+8 Neos\Flow\Http\Middleware\MethodOverrideMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+7 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+6 Neos\Flow\Http\Middleware\TrustedProxiesMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+5 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+4 Neos\Flow\Http\Middleware\StandardsComplianceMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+3 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+2 Neos\Flow\Http\RequestHandler::handleRequest()
+1 Neos\Flow\Core\Bootstrap::run()
+
+
+HTTP REQUEST:
+target: /neos/ui-services/change
+Host: 127.0.0.1:8888
+Connection: keep-alive
+Content-Length: 841
+sec-ch-ua: ".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"
+Content-Type: application/json
+X-Flow-Csrftoken: 10246d170b94695915f7de227c23cd6e
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+sec-ch-ua-platform: "macOS"
+Accept: */*
+Origin: http://127.0.0.1:8888
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://127.0.0.1:8888/neos/content?node=%2Fsites%2Fneosdemo%40user-paul%3Blanguage%3Den_US
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8,de;q=0.7
+Cookie: Neos_Session=KZI35gYRPY9RshGcHCykAJVTXwx88SyJ
+
+PHP PROCESS:
+Inode: 8771550
+PID: 1589
+UID: 501
+GID: 80
+User: paul
+

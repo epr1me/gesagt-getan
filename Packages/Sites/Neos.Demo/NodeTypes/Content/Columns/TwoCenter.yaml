@@ -1,0 +1,13 @@
+'Neos.Demo:Content.Columns.TwoCenter':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Two column content centered
+    icon: 'icon-columns'
+    group: 'structure'
+    position: 400
+  childNodes:
+    column0:
+      type: 'Neos.Demo:Collection.Content.Column'
+    column1:
+      type: 'Neos.Demo:Collection.Content.Column'

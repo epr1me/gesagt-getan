@@ -1,0 +1,1 @@
+return function ($context) {return (is_string($_x_2=(($_1=$context->getAndWrap('props')->getAndWrap('nodeType')) instanceof \Neos\Eel\Context?$_1->unwrap():$_1))|is_string($_y_3=(($_0='.RawContentMode') instanceof \Neos\Eel\Context?$_0->unwrap():$_0)))?($_x_2 . $_y_3):($_x_2+$_y_3);};

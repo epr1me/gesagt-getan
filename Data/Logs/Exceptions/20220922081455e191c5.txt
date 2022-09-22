@@ -1,0 +1,148 @@
+Exception #1332493995 in line 417 of /Applications/MAMP/htdocs/neos-example/Data/Temporary/Development/Cache/Code/Flow_Object_Classes/Neos_Fusion_Core_Runtime.php: The Fusion object `Neos.Demo:Document.Fragment.Content.Footer` cannot be rendered:
+					Most likely you mistyped the prototype name or did not define 
+					the Fusion prototype with `prototype(Neos.Demo:Document.Fragment.Content.Footer) < prototype ...` . 
+					Other possible reasons are a missing parent-prototype or 
+					a missing `@class` annotation for prototypes without parent.
+					It is also possible your Fusion file is not read because 
+					of a missing `include:` statement.
+
+113 Neos\Fusion\Core\Runtime_Original::throwExceptionForUnrenderablePathIfNeeded("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…element<Neos.Demo:Document.Homepage>/footerContent", array|3|, "NULL")
+112 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…element<Neos.Demo:Document.Homepage>/footerContent", Neos\Fusion\FusionObjects\ComponentImplementation)
+111 Neos\Fusion\FusionObjects\Helpers\LazyProps::offsetGet("footerContent")
+110 Neos\Utility\ObjectAccess::getPropertyInternal(Neos\Fusion\FusionObjects\Helpers\LazyProps, "footerContent", false, true)
+109 Neos\Utility\ObjectAccess::getProperty(Neos\Fusion\FusionObjects\Helpers\LazyProps, "footerContent")
+108 Neos\Eel\Context::get("footerContent")
+107 Neos\Eel\Context::getAndWrap("footerContent")
+106 Neos\Eel\ProtectedContext::getAndWrap("footerContent")
+105 Neos\Eel\CompilingEvaluator_Original::{closure}(Neos\Eel\ProtectedContext)
+104 Neos\Eel\CompilingEvaluator_Original::evaluateAndUnwrap(Closure, Neos\Eel\ProtectedContext)
+103 Neos\Eel\CompilingEvaluator_Original::evaluate("props.footerContent", Neos\Eel\ProtectedContext)
+102 Neos\Eel\Utility_Original::evaluateEelExpression("${props.footerContent}", Neos\Eel\CompilingEvaluator, array|23|)
+101 Neos\Fusion\Core\Runtime_Original::evaluateEelExpression("${props.footerContent}", Neos\Fusion\FusionObjects\TagImplementation)
+100 Neos\Fusion\Core\Runtime_Original::evaluateExpressionOrValueInternal("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…<Neos.Fusion:Tag>/content<Neos.Fusion:Tag>/content", array|3|, Neos\Fusion\FusionObjects\TagImplementation)
+99 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…<Neos.Fusion:Tag>/content<Neos.Fusion:Tag>/content", Neos\Fusion\FusionObjects\TagImplementation)
+98 Neos\Fusion\FusionObjects\AbstractFusionObject::fusionValue("content")
+97 Neos\Fusion\FusionObjects\TagImplementation_Original::getContent()
+96 Neos\Fusion\FusionObjects\TagImplementation_Original::evaluate()
+95 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\TagImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…<Neos.Fusion:Tag>/content<Neos.Fusion:Tag>/content", array|9|, array|5|)
+94 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…<Neos.Fusion:Tag>/content<Neos.Fusion:Tag>/content", Neos\Fusion\FusionObjects\TagImplementation)
+93 Neos\Fusion\FusionObjects\AbstractFusionObject::fusionValue("content")
+92 Neos\Fusion\FusionObjects\TagImplementation_Original::getContent()
+91 Neos\Fusion\FusionObjects\TagImplementation_Original::evaluate()
+90 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\TagImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…<Neos.Fusion:Tag>/content<Neos.Fusion:Tag>/content", array|9|, array|5|)
+89 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…<Neos.Fusion:Tag>/content<Neos.Fusion:Tag>/content", Neos\Fusion\FusionObjects\TagImplementation)
+88 Neos\Fusion\FusionObjects\AbstractFusionObject::fusionValue("content")
+87 Neos\Fusion\FusionObjects\TagImplementation_Original::getContent()
+86 Neos\Fusion\FusionObjects\TagImplementation_Original::evaluate()
+85 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\TagImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…<Neos.Fusion:Join>/item_4<Neos.Fusion:Tag>/content", array|9|, array|5|)
+84 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…<Neos.Fusion:Join>/item_4<Neos.Fusion:Tag>/content", Neos\Fusion\FusionObjects\TagImplementation)
+83 Neos\Fusion\FusionObjects\AbstractFusionObject::fusionValue("content")
+82 Neos\Fusion\FusionObjects\TagImplementation_Original::getContent()
+81 Neos\Fusion\FusionObjects\TagImplementation_Original::evaluate()
+80 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\TagImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma….Demo:Document.Base>/body<Neos.Fusion:Join>/item_4", array|9|, array|5|)
+79 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma….Demo:Document.Base>/body<Neos.Fusion:Join>/item_4", Neos\Fusion\FusionObjects\JoinImplementation)
+78 Neos\Fusion\FusionObjects\AbstractFusionObject::fusionValue("item_4")
+77 Neos\Fusion\FusionObjects\AbstractArrayFusionObject::evaluateNestedProperties()
+76 Neos\Fusion\FusionObjects\JoinImplementation_Original::evaluate()
+75 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\JoinImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…t.Homepage>/renderer<Neos.Demo:Document.Base>/body", array|9|, array|5|)
+74 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…t.Homepage>/renderer<Neos.Demo:Document.Base>/body", Neos\Fusion\FusionObjects\ComponentImplementation)
+73 Neos\Fusion\FusionObjects\Helpers\LazyProps::offsetGet("body")
+72 Neos\Utility\ObjectAccess::getPropertyInternal(Neos\Fusion\FusionObjects\Helpers\LazyProps, "body", false, true)
+71 Neos\Utility\ObjectAccess::getProperty(Neos\Fusion\FusionObjects\Helpers\LazyProps, "body")
+70 Neos\Eel\Context::get("body")
+69 Neos\Eel\Context::getAndWrap("body")
+68 Neos\Eel\ProtectedContext::getAndWrap("body")
+67 Neos\Eel\CompilingEvaluator_Original::{closure}(Neos\Eel\ProtectedContext)
+66 Neos\Eel\CompilingEvaluator_Original::evaluateAndUnwrap(Closure, Neos\Eel\ProtectedContext)
+65 Neos\Eel\CompilingEvaluator_Original::evaluate("props.body", Neos\Eel\ProtectedContext)
+64 Neos\Eel\Utility_Original::evaluateEelExpression("${props.body}", Neos\Eel\CompilingEvaluator, array|23|)
+63 Neos\Fusion\Core\Runtime_Original::evaluateEelExpression("${props.body}", Neos\Fusion\FusionObjects\HttpResponseImplementation)
+62 Neos\Fusion\Core\Runtime_Original::evaluateExpressionOrValueInternal("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma….Demo:Document.Base>/renderer<Neos.Neos:Page>/body", array|7|, Neos\Fusion\FusionObjects\HttpResponseImplementation)
+61 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma….Demo:Document.Base>/renderer<Neos.Neos:Page>/body", Neos\Fusion\FusionObjects\HttpResponseImplementation)
+60 Neos\Fusion\FusionObjects\AbstractFusionObject::fusionValue("body")
+59 Neos\Fusion\FusionObjects\AbstractArrayFusionObject::evaluateNestedProperties()
+58 Neos\Fusion\FusionObjects\HttpResponseImplementation_Original::evaluate()
+57 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\HttpResponseImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…mepage>/renderer<Neos.Demo:Document.Base>/renderer", array|21|, array|6|)
+56 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…mepage>/renderer<Neos.Demo:Document.Base>/renderer", NULL, "Exception")
+55 Neos\Fusion\Core\Runtime_Original::render("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…mepage>/renderer<Neos.Demo:Document.Base>/renderer")
+54 Neos\Fusion\FusionObjects\ComponentImplementation_Original::render(array|5|)
+53 Neos\Fusion\FusionObjects\ComponentImplementation_Original::evaluate()
+52 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\ComponentImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…her>/element<Neos.Demo:Document.Homepage>/renderer", array|9|, array|5|)
+51 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…her>/element<Neos.Demo:Document.Homepage>/renderer", NULL, "Exception")
+50 Neos\Fusion\Core\Runtime_Original::render("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Ma…her>/element<Neos.Demo:Document.Homepage>/renderer")
+49 Neos\Fusion\FusionObjects\ComponentImplementation_Original::render(array|5|)
+48 Neos\Fusion\FusionObjects\ComponentImplementation_Original::evaluate()
+47 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\ComponentImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Matcher>/element<Neos.Demo:Document.Homepage>", array|15|, array|5|)
+46 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Matcher>/element<Neos.Demo:Document.Homepage>", NULL, "Exception")
+45 Neos\Fusion\Core\Runtime_Original::render("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Matcher>/element<Neos.Demo:Document.Homepage>")
+44 Neos\Fusion\FusionObjects\RendererImplementation_Original::evaluate()
+43 Neos\Fusion\FusionObjects\MatcherImplementation_Original::evaluate()
+42 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\MatcherImplementation, "root<Neos.Fusion:Case>/documentType<Neos.Fusion:Matcher>", array|4|, array|5|)
+41 Neos\Fusion\Core\Runtime_Original::evaluate("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Matcher>", NULL, "Exception")
+40 Neos\Fusion\Core\Runtime_Original::render("root<Neos.Fusion:Case>/documentType<Neos.Fusion:Matcher>")
+39 Neos\Fusion\FusionObjects\CaseImplementation_Original::renderMatcher("documentType")
+38 Neos\Fusion\FusionObjects\CaseImplementation_Original::evaluate()
+37 Neos\Fusion\Core\Runtime_Original::evaluateObjectOrRetrieveFromCache(Neos\Fusion\FusionObjects\CaseImplementation, "root", array|13|, array|6|)
+36 Neos\Fusion\Core\Runtime_Original::evaluate("root", NULL, "Exception")
+35 Neos\Fusion\Core\Runtime_Original::render("root")
+34 Neos\Neos\View\FusionView_Original::render()
+33 Neos\Flow\Mvc\Controller\ActionController_Original::renderView()
+32 Neos\Flow\Mvc\Controller\ActionController_Original::callActionMethod()
+31 Neos\Flow\Mvc\Controller\ActionController_Original::processRequest(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+30 Neos\Flow\Mvc\Dispatcher_Original::initiateDispatchLoop(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+29 Neos\Flow\Mvc\Dispatcher_Original::dispatch(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+28 Neos\Flow\Mvc\DispatchMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+27 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+26 Neos\Flow\Http\Middleware\SecurityEntryPointMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+25 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+24 Neos\Flow\Http\Middleware\RequestBodyParsingMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+23 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+22 Neos\Flow\Mvc\FlashMessage\FlashMessageMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+21 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+20 Neos\Flow\Http\Middleware\PoweredByMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+19 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+18 Neos\RedirectHandler\RedirectMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+17 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+16 Neos\Flow\Mvc\Routing\RoutingMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+15 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+14 Neos\Neos\Routing\RequestUriHostMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+13 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+12 Neos\FluidAdaptor\Core\Widget\AjaxWidgetMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+11 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+10 Neos\Flow\Http\Middleware\SessionMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+9 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+8 Neos\Flow\Http\Middleware\MethodOverrideMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+7 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+6 Neos\Flow\Http\Middleware\TrustedProxiesMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+5 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+4 Neos\Flow\Http\Middleware\StandardsComplianceMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+3 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+2 Neos\Flow\Http\RequestHandler::handleRequest()
+1 Neos\Flow\Core\Bootstrap::run()
+
+
+HTTP REQUEST:
+target: /neos/preview?node%5B__contextNodePath%5D=%2Fsites%2Fneosdemo%40user-paul%3Blanguage%3Den_US
+Host: 127.0.0.1:8888
+Connection: keep-alive
+sec-ch-ua: ".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: iframe
+Referer: http://127.0.0.1:8888/neos/content?node=%2Fsites%2Fneosdemo%40user-paul%3Blanguage%3Den_US
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8,de;q=0.7
+Cookie: Neos_Session=FrBKHhvsp6xRXrgXtYqD25EDUs4HSics
+
+PHP PROCESS:
+Inode: 8771550
+PID: 2066
+UID: 501
+GID: 80
+User: paul
+

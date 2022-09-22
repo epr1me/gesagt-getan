@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('I18n')->callAndWrap('id', array('username'))->callAndWrap('value', array('Username'))->callAndWrap('package', array('Neos.Neos'))->callAndWrap('source', array('Main'));};

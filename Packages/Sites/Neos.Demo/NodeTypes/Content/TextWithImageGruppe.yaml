@@ -1,0 +1,40 @@
+'Neos.Demo:Content.TextWithImageGruppe':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.NodeTypes.BaseMixins:TextMixin': true
+    'Neos.NodeTypes.BaseMixins:ImageMixin': true
+    'Neos.NodeTypes.BaseMixins:ImageCaptionMixin': true
+    'Neos.Demo:Constraint.Content.Carousel': true
+    'Neos.Demo:Constraint.Content.Column': true
+    'Neos.NodeTypes.BaseMixins:TitleMixin': true
+    'Neos.NodeTypes.BaseMixins:LinkMixin': true
+    'Neos.Demo:Content.Headline': true
+  ui:
+    label: Image-Text Gruppe
+    icon: 'icon-picture'
+    position: 410
+    inlineEditable: true
+    inspector:
+      groups: 
+        link:
+          label: 'Link'
+          icon: 'icon-link'
+  properties:
+    label:
+      ui:
+        aloha:
+          placeholder: 'Link text'
+      options: 
+        silhouette: 'text.plain'
+    link:
+      type: string
+      ui: 
+        label: 'Link'
+        inspector:
+          group: link
+    linkTarget: 
+      type: boolean
+      ui: 
+        label: 'Open in new window'
+        inspector:
+          group: link

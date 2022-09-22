@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('Array')->callAndWrap('slice', array($context->getAndWrap('Neos')->getAndWrap('Ui')->getAndWrap('PositionalArraySorter')->callAndWrap('sort', array($context->getAndWrap('value'))),0));};

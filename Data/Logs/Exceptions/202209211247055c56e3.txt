@@ -1,0 +1,78 @@
+Exception in line 506 of /Applications/MAMP/htdocs/neos-example/Packages/Libraries/neos/cache/Classes/Backend/SimpleFileBackend.php: fread(): Argument #2 ($length) must be greater than 0
+
+50 fread(resource, 0)
+49 Neos\Cache\Backend\SimpleFileBackend::readCacheFile("/Applications/MAMP/htdocs/neos-example/Data/Tempor…sistence_Doctrine/9c073d783b47c8fa238566420f7b191b")
+48 Neos\Cache\Backend\SimpleFileBackend::get("9c073d783b47c8fa238566420f7b191b")
+47 Neos\Cache\Frontend\VariableFrontend::get("9c073d783b47c8fa238566420f7b191b")
+46 Neos\Flow\Persistence\Doctrine\CacheAdapter_Original::fetch("Neos__Media__Domain__Model__Thumbnail__CLASSMETADATA__")
+45 Doctrine\Common\Cache\Psr6\CacheAdapter::doFetchMultiple(array|1|)
+44 Doctrine\Common\Cache\Psr6\CacheAdapter::getItems(array|1|)
+43 Doctrine\Persistence\Mapping\AbstractClassMetadataFactory::getMetadataFor("Neos\Media\Domain\Model\Thumbnail")
+42 Doctrine\ORM\EntityManager::find("Neos\Media\Domain\Model\Thumbnail", "cd226292-830b-4327-a8a7-af076824d95b")
+41 Neos\Flow\Persistence\Doctrine\PersistenceManager_Original::getObjectByIdentifier("cd226292-830b-4327-a8a7-af076824d95b", "Neos\Media\Domain\Model\Thumbnail")
+40 Neos\Media\TypeConverter\AssetInterfaceConverter_Original::fetchObjectFromPersistence("cd226292-830b-4327-a8a7-af076824d95b", "Neos\Media\Domain\Model\Thumbnail")
+39 Neos\Flow\Property\TypeConverter\PersistentObjectConverter_Original::handleArrayData(array|1|, "Neos\Media\Domain\Model\Thumbnail", array|0|, Neos\Flow\Mvc\Controller\MvcPropertyMappingConfiguration)
+38 Neos\Flow\Property\TypeConverter\PersistentObjectConverter_Original::convertFrom(array|1|, "Neos\Media\Domain\Model\Thumbnail", array|0|, Neos\Flow\Mvc\Controller\MvcPropertyMappingConfiguration)
+37 Neos\Media\TypeConverter\AssetInterfaceConverter_Original::convertFrom(array|1|, "Neos\Media\Domain\Model\Thumbnail", array|0|, Neos\Flow\Mvc\Controller\MvcPropertyMappingConfiguration)
+36 Neos\Flow\Property\PropertyMapper_Original::doMapping("cd226292-830b-4327-a8a7-af076824d95b", "Neos\Media\Domain\Model\Thumbnail", Neos\Flow\Mvc\Controller\MvcPropertyMappingConfiguration, array|0|)
+35 Neos\Flow\Property\PropertyMapper_Original::convert("cd226292-830b-4327-a8a7-af076824d95b", "Neos\Media\Domain\Model\Thumbnail", Neos\Flow\Mvc\Controller\MvcPropertyMappingConfiguration)
+34 Neos\Flow\ObjectManagement\DependencyInjection\DependencyProxy::__call("convert", array|3|)
+33 Neos\Flow\Mvc\Controller\Argument_Original::setValue("cd226292-830b-4327-a8a7-af076824d95b")
+32 Neos\Flow\Mvc\Controller\AbstractController_Original::mapRequestArgumentsToControllerArguments()
+31 Neos\Flow\Mvc\Controller\ActionController_Original::processRequest(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+30 Neos\Flow\Mvc\Dispatcher_Original::initiateDispatchLoop(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+29 Neos\Flow\Mvc\Dispatcher_Original::dispatch(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+28 Neos\Flow\Mvc\DispatchMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+27 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+26 Neos\Flow\Http\Middleware\SecurityEntryPointMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+25 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+24 Neos\Flow\Http\Middleware\RequestBodyParsingMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+23 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+22 Neos\Flow\Mvc\FlashMessage\FlashMessageMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+21 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+20 Neos\Flow\Http\Middleware\PoweredByMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+19 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+18 Neos\RedirectHandler\RedirectMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+17 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+16 Neos\Flow\Mvc\Routing\RoutingMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+15 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+14 Neos\Neos\Routing\RequestUriHostMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+13 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+12 Neos\FluidAdaptor\Core\Widget\AjaxWidgetMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+11 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+10 Neos\Flow\Http\Middleware\SessionMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+9 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+8 Neos\Flow\Http\Middleware\MethodOverrideMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+7 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+6 Neos\Flow\Http\Middleware\TrustedProxiesMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+5 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+4 Neos\Flow\Http\Middleware\StandardsComplianceMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+3 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+2 Neos\Flow\Http\RequestHandler::handleRequest()
+1 Neos\Flow\Core\Bootstrap::run()
+
+
+HTTP REQUEST:
+target: /media/thumbnail/cd226292-830b-4327-a8a7-af076824d95b
+Host: 127.0.0.1:8888
+Connection: keep-alive
+sec-ch-ua: ".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+sec-ch-ua-platform: "macOS"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:8888/neos/media/browser/assets/index.html?constraints%5BmediaTypes%5D%5B0%5D=image%2F*
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8,de;q=0.7
+Cookie: Neos_Session=KZI35gYRPY9RshGcHCykAJVTXwx88SyJ
+
+PHP PROCESS:
+Inode: 8771550
+PID: 11970
+UID: 501
+GID: 80
+User: paul
+

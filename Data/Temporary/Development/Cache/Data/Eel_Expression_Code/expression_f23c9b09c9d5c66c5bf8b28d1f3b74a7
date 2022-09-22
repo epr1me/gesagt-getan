@@ -1,0 +1,1 @@
+return function ($context) {return ((($_0=$context->getAndWrap('String')->callAndWrap('indexOf', array($context->getAndWrap('props')->getAndWrap('path'),'resource://'))) instanceof \Neos\Eel\Context?$_0->unwrap():$_0))===((($_1=0) instanceof \Neos\Eel\Context?$_1->unwrap():$_1));};

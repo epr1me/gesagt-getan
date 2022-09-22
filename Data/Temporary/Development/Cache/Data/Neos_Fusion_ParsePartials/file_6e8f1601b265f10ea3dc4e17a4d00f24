@@ -1,0 +1,31 @@
+O:48:"Neos\Fusion\Core\ObjectTreeParser\Ast\FusionFile":2:{s:13:"statementList";O:51:"Neos\Fusion\Core\ObjectTreeParser\Ast\StatementList":1:{s:10:"statements";a:1:{i:0;O:53:"Neos\Fusion\Core\ObjectTreeParser\Ast\ObjectStatement":4:{s:4:"path";O:48:"Neos\Fusion\Core\ObjectTreeParser\Ast\ObjectPath":1:{s:8:"segments";a:1:{i:0;O:58:"Neos\Fusion\Core\ObjectTreeParser\Ast\PrototypePathSegment":1:{s:10:"identifier";s:21:"Neos.Fusion.Form:Form";}}}s:9:"operation";O:47:"Neos\Fusion\Core\ObjectTreeParser\Ast\ValueCopy":1:{s:18:"assignedObjectPath";O:56:"Neos\Fusion\Core\ObjectTreeParser\Ast\AssignedObjectPath":2:{s:10:"objectPath";O:48:"Neos\Fusion\Core\ObjectTreeParser\Ast\ObjectPath":1:{s:8:"segments";a:1:{i:0;O:58:"Neos\Fusion\Core\ObjectTreeParser\Ast\PrototypePathSegment":1:{s:10:"identifier";s:31:"Neos.Fusion.Form:Component.Form";}}}s:10:"isRelative";b:0;}}s:5:"block";O:43:"Neos\Fusion\Core\ObjectTreeParser\Ast\Block":1:{s:13:"statementList";O:51:"Neos\Fusion\Core\ObjectTreeParser\Ast\StatementList":1:{s:10:"statements";a:1:{i:0;O:53:"Neos\Fusion\Core\ObjectTreeParser\Ast\ObjectStatement":4:{s:4:"path";O:48:"Neos\Fusion\Core\ObjectTreeParser\Ast\ObjectPath":1:{s:8:"segments";a:1:{i:0;O:49:"Neos\Fusion\Core\ObjectTreeParser\Ast\PathSegment":1:{s:10:"identifier";s:8:"renderer";}}}s:9:"operation";O:53:"Neos\Fusion\Core\ObjectTreeParser\Ast\ValueAssignment":1:{s:9:"pathValue";O:56:"Neos\Fusion\Core\ObjectTreeParser\Ast\DslExpressionValue":2:{s:10:"identifier";s:3:"afx";s:4:"code";s:1122:"
+        <form
+            action={form.getTarget()}
+            method={form.getMethod()}
+            enctype={form.getEncoding()}
+            {...props.attributes}
+        >
+            <div style="display: none">
+                <Neos.Fusion:Loop
+                    items={form.calculateHiddenFields(props.content)}
+                    itemKey="fieldName"
+                    itemName="fieldValue"
+                >
+                    <input type="hidden" name={fieldName} value={fieldValue} />
+                </Neos.Fusion:Loop>
+                <Neos.Fusion:Join
+                    @if.isNoGetRequest={String.toLowerCase(form.getMethod()) != 'get'}
+                    @if.isAuthenticated={Security.isAuthenticated()}
+                >
+                    <input
+                        @cache.mode="uncached"
+                        @cache.context={[]}
+                        type="hidden"
+                        name="__csrfToken"
+                        value={Security.csrfToken()}
+                    />
+                </Neos.Fusion:Join>
+            </div>
+            {props.content}
+        </form>
+    ";}}s:5:"block";N;s:6:"cursor";i:94;}}}}s:6:"cursor";i:33;}}}s:22:"contextPathAndFileName";s:67:"resource://Neos.Fusion.Form/Private/Fusion/./Prototypes/Form.fusion";}0             2796      

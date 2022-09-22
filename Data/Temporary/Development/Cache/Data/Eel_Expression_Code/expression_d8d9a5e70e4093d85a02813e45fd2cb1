@@ -1,0 +1,1 @@
+return function ($context) {return ((($_0=$context->getAndWrap('this')->getAndWrap('startingPoint')) instanceof \Neos\Eel\Context?$_0->unwrap():$_0)?(0):(1));};

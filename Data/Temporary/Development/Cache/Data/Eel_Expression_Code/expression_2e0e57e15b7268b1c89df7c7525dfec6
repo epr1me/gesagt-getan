@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('String')->callAndWrap('replace', array($context->getAndWrap('documentNode')->getAndWrap('context')->getAndWrap('dimensions')->getAndWrap('language')->getAndWrap(0),'_','-'));};

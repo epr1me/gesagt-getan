@@ -1,0 +1,1 @@
+return function ($context) {return ((($_0=$context->getAndWrap('props')->getAndWrap('property')) instanceof \Neos\Eel\Context?$_0->unwrap():$_0)?(TRUE):(FALSE));};

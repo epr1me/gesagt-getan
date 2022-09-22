@@ -1,0 +1,1 @@
+return function ($context) {return $context->callAndWrap('q', array($context->getAndWrap('documentNode')))->callAndWrap('add', array($context->callAndWrap('q', array($context->getAndWrap('documentNode')))->callAndWrap('parents', array('[instanceof Neos.Neos:Document]'))))->callAndWrap('get', array());};

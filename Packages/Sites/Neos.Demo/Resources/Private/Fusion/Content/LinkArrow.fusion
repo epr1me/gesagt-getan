@@ -1,0 +1,16 @@
+##
+# "Link with Arrow" element
+#
+prototype(Neos.Demo:Content.ArrowLink) < prototype(Neos.Neos:ContentComponent) {
+    label = Neos.Neos:Editable {
+        property = 'label'
+    }
+    link = ${q(node).property('link')}
+    linkTarget = ${q(node).property('linkTarget') ? '_blank' : '_self'}
+    renderAsLink = ${site.context.inBackend ? false : true}
+
+    renderer = afx`
+        <a @if.render={props.renderAsLink} href={props.link} target={props.linkTarget} class="link-arrow">{props.label}</a>
+        <div @if.render={!props.renderAsLink} class="link-arrow">{props.label}</div>
+    `
+}

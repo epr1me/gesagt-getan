@@ -1,0 +1,10 @@
+'Neos.Demo:Content.Columns.Aktivitaeten':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Demo:Content.Headline': true
+    'Neos.Demo:Content.Columns.Four': true
+  ui:
+    label: Aktivitaeten
+    icon: 'icon-columns'
+    group: 'structure'
+    position: 400

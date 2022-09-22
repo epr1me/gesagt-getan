@@ -1,0 +1,109 @@
+Exception #1180600696 in line 32 of /Applications/MAMP/htdocs/neos-example/Packages/Application/Neos.Fusion/Classes/Core/ObjectTreeParser/Ast/DslExpressionValue.php: Fusion parser exception in 'Document/Fragment/Content/Footer.fusion' of the package 'Neos.Demo'.
+resource://Neos.Demo/Private/Fusion/./Document/Fragment/Content/Footer.fusion:12
+   |
+12 |     renderer = afx`
+   | 
+Error during AFX-parsing: <div> <img> Unexpected character "<" in identifier ""
+
+67 Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor_Original::visitDslExpressionValue(Neos\Fusion\Core\ObjectTreeParser\Ast\DslExpressionValue)
+66 Neos\Fusion\Core\ObjectTreeParser\Ast\DslExpressionValue::visit(Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor)
+65 Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor_Original::visitValueAssignment(Neos\Fusion\Core\ObjectTreeParser\Ast\ValueAssignment, array|3|)
+64 Neos\Fusion\Core\ObjectTreeParser\Ast\ValueAssignment::visit(Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor, array|3|)
+63 Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor_Original::visitObjectStatement(Neos\Fusion\Core\ObjectTreeParser\Ast\ObjectStatement)
+62 Neos\Fusion\Core\ObjectTreeParser\Ast\ObjectStatement::visit(Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor)
+61 Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor_Original::visitStatementList(Neos\Fusion\Core\ObjectTreeParser\Ast\StatementList)
+60 Neos\Fusion\Core\ObjectTreeParser\Ast\StatementList::visit(Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor)
+59 Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor_Original::visitBlock(Neos\Fusion\Core\ObjectTreeParser\Ast\Block, array|2|)
+58 Neos\Fusion\Core\ObjectTreeParser\Ast\Block::visit(Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor, array|2|)
+57 Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor_Original::visitObjectStatement(Neos\Fusion\Core\ObjectTreeParser\Ast\ObjectStatement)
+56 Neos\Fusion\Core\ObjectTreeParser\Ast\ObjectStatement::visit(Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor)
+55 Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor_Original::visitStatementList(Neos\Fusion\Core\ObjectTreeParser\Ast\StatementList)
+54 Neos\Fusion\Core\ObjectTreeParser\Ast\StatementList::visit(Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor)
+53 Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor_Original::visitFusionFile(Neos\Fusion\Core\ObjectTreeParser\Ast\FusionFile)
+52 Neos\Fusion\Core\Parser_Original::handleFileInclude(Neos\Fusion\Core\ObjectTreeParser\MergedArrayTree, "./**/*.fusion", "resource://Neos.Demo/Private/Fusion/Root.fusion")
+51 Neos\Fusion\Core\Parser_Original::Neos\Fusion\Core\{closure}(Neos\Fusion\Core\ObjectTreeParser\MergedArrayTree, "./**/*.fusion", "resource://Neos.Demo/Private/Fusion/Root.fusion")
+50 Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor_Original::visitIncludeStatement(Neos\Fusion\Core\ObjectTreeParser\Ast\IncludeStatement)
+49 Neos\Fusion\Core\ObjectTreeParser\Ast\IncludeStatement::visit(Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor)
+48 Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor_Original::visitStatementList(Neos\Fusion\Core\ObjectTreeParser\Ast\StatementList)
+47 Neos\Fusion\Core\ObjectTreeParser\Ast\StatementList::visit(Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor)
+46 Neos\Fusion\Core\ObjectTreeParser\MergedArrayTreeVisitor_Original::visitFusionFile(Neos\Fusion\Core\ObjectTreeParser\Ast\FusionFile)
+45 Neos\Fusion\Core\Parser_Original::parse("
+include: resource://Neos.Fusion/Private/Fusion/Ro…ude all .fusion files
+#
+include: ./**/*.fusion
+
+
+
+", "resource://Neos.Demo/Private/Fusion/Root.fusion")
+44 Neos\Neos\Domain\Service\FusionService_Original::getMergedFusionObjectTree(Neos\ContentRepository\Domain\Model\Node)
+43 Neos\Neos\Domain\Service\FusionService_Original::createRuntime(Neos\ContentRepository\Domain\Model\Node, Neos\Flow\Mvc\Controller\ControllerContext)
+42 Neos\Neos\View\FusionView_Original::getFusionRuntime(Neos\ContentRepository\Domain\Model\Node)
+41 Neos\Neos\View\FusionView_Original::canRenderWithNodeAndPath()
+40 Neos\Neos\Controller\Frontend\NodeController_Original::previewAction(Neos\ContentRepository\Domain\Model\Node)
+39 Neos\Neos\Controller\Frontend\NodeController::previewAction(Neos\ContentRepository\Domain\Model\Node)
+38 Neos\Neos\Controller\Frontend\NodeController::Flow_Aop_Proxy_invokeJoinPoint(Neos\Flow\Aop\JoinPoint)
+37 Neos\Flow\Aop\Advice\AdviceChain::proceed(Neos\Flow\Aop\JoinPoint)
+36 Neos\Flow\Security\Aspect\PolicyEnforcementAspect_Original::enforcePolicy(Neos\Flow\Aop\JoinPoint)
+35 Neos\Flow\Aop\Advice\AroundAdvice::invoke(Neos\Flow\Aop\JoinPoint)
+34 Neos\Flow\Aop\Advice\AdviceChain::proceed(Neos\Flow\Aop\JoinPoint)
+33 Neos\Neos\Controller\Frontend\NodeController::previewAction(Neos\ContentRepository\Domain\Model\Node)
+32 Neos\Flow\Mvc\Controller\ActionController_Original::callActionMethod()
+31 Neos\Flow\Mvc\Controller\ActionController_Original::processRequest(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+30 Neos\Flow\Mvc\Dispatcher_Original::initiateDispatchLoop(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+29 Neos\Flow\Mvc\Dispatcher_Original::dispatch(Neos\Flow\Mvc\ActionRequest, Neos\Flow\Mvc\ActionResponse)
+28 Neos\Flow\Mvc\DispatchMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+27 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+26 Neos\Flow\Http\Middleware\SecurityEntryPointMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+25 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+24 Neos\Flow\Http\Middleware\RequestBodyParsingMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+23 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+22 Neos\Flow\Mvc\FlashMessage\FlashMessageMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+21 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+20 Neos\Flow\Http\Middleware\PoweredByMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+19 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+18 Neos\RedirectHandler\RedirectMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+17 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+16 Neos\Flow\Mvc\Routing\RoutingMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+15 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+14 Neos\Neos\Routing\RequestUriHostMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+13 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+12 Neos\FluidAdaptor\Core\Widget\AjaxWidgetMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+11 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+10 Neos\Flow\Http\Middleware\SessionMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+9 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+8 Neos\Flow\Http\Middleware\MethodOverrideMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+7 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+6 Neos\Flow\Http\Middleware\TrustedProxiesMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+5 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+4 Neos\Flow\Http\Middleware\StandardsComplianceMiddleware_Original::process(GuzzleHttp\Psr7\ServerRequest, Neos\Flow\Http\Middleware\MiddlewaresChain)
+3 Neos\Flow\Http\Middleware\MiddlewaresChain_Original::handle(GuzzleHttp\Psr7\ServerRequest)
+2 Neos\Flow\Http\RequestHandler::handleRequest()
+1 Neos\Flow\Core\Bootstrap::run()
+
+
+HTTP REQUEST:
+target: /neos/preview?node%5B__contextNodePath%5D=%2Fsites%2Fneosdemo%40user-paul%3Blanguage%3Den_US
+Host: 127.0.0.1:8888
+Connection: keep-alive
+sec-ch-ua: ".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: iframe
+Referer: http://127.0.0.1:8888/neos/content?node=%2Fsites%2Fneosdemo%40user-paul%3Blanguage%3Den_US
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8,de;q=0.7
+Cookie: Neos_Session=FrBKHhvsp6xRXrgXtYqD25EDUs4HSics
+
+PHP PROCESS:
+Inode: 8771550
+PID: 2064
+UID: 501
+GID: 80
+User: paul
+

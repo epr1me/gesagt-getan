@@ -1,0 +1,5 @@
+return function ($context) {return $context->getAndWrap('Array')->callAndWrap('reduce', array($context->getAndWrap('value'),function($items,$url) use ($context) {
+            $context = clone $context;
+            $context->push($items,"items");$context->push($url,"url");
+            return ((($_2=(!(($_1=(!(($_0=$context->getAndWrap('url')) instanceof \Neos\Eel\Context?$_0->unwrap():$_0))) instanceof \Neos\Eel\Context?$_1->unwrap():$_1))) instanceof \Neos\Eel\Context?$_2->unwrap():$_2)?($context->getAndWrap('Array')->callAndWrap('push', array($context->getAndWrap('items'),$context->getAndWrap('url')))):($context->getAndWrap('items')));
+        },$context->wrap(array())));};

@@ -1,0 +1,22 @@
+prototype(Neos.Demo:Document.Fragment.Menu.Buttons) < prototype(Neos.Fusion:Component) {
+    menuItems = Neos.Neos:DimensionsMenuItems {
+        dimension = 'buttons'
+    }
+
+    renderer = afx`
+        <div class="buttons-menu">
+            <a href="#">Kontakt</a>
+            <a href="#">Mitglied werden</a>
+        </div>
+    `
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            documentNode = ${documentNode}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+        }
+    }
+}

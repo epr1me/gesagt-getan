@@ -1,0 +1,35 @@
+'Neos.Demo:Content.ArrowLink':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.NodeTypes.BaseMixins:LinkMixin': true
+    'Neos.Demo:Constraint.Content.Carousel': true
+    'Neos.Demo:Constraint.Content.Column': true
+  ui:
+    label: Link with Arrow
+    icon: 'icon-link'
+    position: 200
+    inlineEditable: true
+    inspector:
+      groups: 
+        link:
+          label: 'Link'
+          icon: 'icon-link'
+  properties:
+    label:
+      ui:
+        aloha:
+          placeholder: 'Link text'
+      options: 
+        silhouette: 'text.plain'
+    link:
+      type: string
+      ui: 
+        label: 'Link'
+        inspector:
+          group: link
+    linkTarget: 
+      type: boolean
+      ui: 
+        label: 'Open in new window'
+        inspector:
+          group: link

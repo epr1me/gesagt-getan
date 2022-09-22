@@ -1,0 +1,52 @@
+Exception in line 53 of /Applications/MAMP/htdocs/neos-example/Packages/Application/Neos.Fusion/Classes/Core/Cache/ParserCacheFlusher.php: Couldn't resolve realpath for: '/Applications/MAMP/htdocs/neos-example/Packages/Sites/Neos.Demo/NodeTypes/Content/TextWithImageRounded.yaml'
+
+21 Neos\Fusion\Core\Cache\ParserCacheFlusher::getCacheIdentifierForFile("/Applications/MAMP/htdocs/neos-example/Packages/Si…s.Demo/NodeTypes/Content/TextWithImageRounded.yaml")
+20 Neos\Fusion\Core\Cache\ParserCacheFlusher::flushPartialCacheOnFileChanges("Fusion_Files", array|3|, "Neos\Flow\Monitor\FileMonitor::filesHaveChanged")
+19 call_user_func_array(array|2|, array|3|)
+18 Neos\Flow\SignalSlot\Dispatcher::dispatch("Neos\Flow\Monitor\FileMonitor", "filesHaveChanged", array|2|)
+17 Neos\Flow\Monitor\FileMonitor_Original::emitFilesHaveChanged("Fusion_Files", array|3|)
+16 Neos\Flow\Monitor\FileMonitor_Original::detectChanges()
+15 Neos\Fusion\Package::Neos\Fusion\{closure}(Neos\Flow\Core\Booting\Step, "runtime", "Neos\Flow\Core\Booting\Sequence::afterInvokeStep")
+14 Closure::__invoke(Neos\Flow\Core\Booting\Step, "runtime", "Neos\Flow\Core\Booting\Sequence::afterInvokeStep")
+13 call_user_func_array(array|2|, array|3|)
+12 Neos\Flow\SignalSlot\Dispatcher::dispatch("Neos\Flow\Core\Booting\Sequence", "afterInvokeStep", array|2|)
+11 Neos\Flow\Core\Booting\Sequence::invokeStep(Neos\Flow\Core\Booting\Step, Neos\Flow\Core\Bootstrap)
+10 Neos\Flow\Core\Booting\Sequence::invokeStep(Neos\Flow\Core\Booting\Step, Neos\Flow\Core\Bootstrap)
+9 Neos\Flow\Core\Booting\Sequence::invokeStep(Neos\Flow\Core\Booting\Step, Neos\Flow\Core\Bootstrap)
+8 Neos\Flow\Core\Booting\Sequence::invokeStep(Neos\Flow\Core\Booting\Step, Neos\Flow\Core\Bootstrap)
+7 Neos\Flow\Core\Booting\Sequence::invokeStep(Neos\Flow\Core\Booting\Step, Neos\Flow\Core\Bootstrap)
+6 Neos\Flow\Core\Booting\Sequence::invokeStep(Neos\Flow\Core\Booting\Step, Neos\Flow\Core\Bootstrap)
+5 Neos\Flow\Core\Booting\Sequence::invokeStep(Neos\Flow\Core\Booting\Step, Neos\Flow\Core\Bootstrap)
+4 Neos\Flow\Core\Booting\Sequence::invoke(Neos\Flow\Core\Bootstrap)
+3 Neos\Flow\Http\RequestHandler::boot()
+2 Neos\Flow\Http\RequestHandler::handleRequest()
+1 Neos\Flow\Core\Bootstrap::run()
+
+
+HTTP REQUEST:
+target: /neos/content?node=%2Fsites%2Fneosdemo%40user-paul%3Blanguage%3Den_US
+Host: 127.0.0.1:8888
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: ".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.1:8888/neos/administration/configuration?moduleArguments%5B%40package%5D=neos.neos&moduleArguments%5B%40controller%5D=module%5Cadministration%5Cconfiguration&moduleArguments%5B%40action%5D=index&moduleArguments%5B%40format%5D=html&moduleArguments%5Btype%5D=Caches
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8,de;q=0.7
+Cookie: Neos_Session=KZI35gYRPY9RshGcHCykAJVTXwx88SyJ
+
+PHP PROCESS:
+Inode: 8771550
+PID: 1589
+UID: 501
+GID: 80
+User: paul
+

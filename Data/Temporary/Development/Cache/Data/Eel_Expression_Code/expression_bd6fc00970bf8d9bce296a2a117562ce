@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('form')->callAndWrap('calculateHiddenFields', array($context->getAndWrap('props')->getAndWrap('content')));};

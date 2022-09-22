@@ -1,0 +1,1 @@
+return function ($context) {return $context->callAndWrap('q', array($context->getAndWrap('node')))->callAndWrap('context', array($context->wrap(array())->push(TRUE,'invisibleContentShown')))->callAndWrap('children', array())->callAndWrap('cacheLifetime', array());};

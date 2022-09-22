@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('StaticResource')->callAndWrap('uri', array('Neos.Twitter.Bootstrap','Public/3/js/bootstrap.min.js'));};

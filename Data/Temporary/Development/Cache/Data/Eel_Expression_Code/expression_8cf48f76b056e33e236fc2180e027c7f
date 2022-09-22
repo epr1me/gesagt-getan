@@ -1,0 +1,1 @@
+return function ($context) {return ((($_0=$context->getAndWrap('Type')->callAndWrap('isArray', array($context->getAndWrap('value')))) instanceof \Neos\Eel\Context?$_0->unwrap():$_0)?($context->getAndWrap('Array')->callAndWrap('join', array($context->getAndWrap('value')))):($context->getAndWrap('value')));};

@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('node')->getAndWrap('nodeType')->getAndWrap('fullConfiguration')->getAndWrap('ui')->getAndWrap('icon');};

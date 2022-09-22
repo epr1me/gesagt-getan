@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('form')->callAndWrap('getTarget', array());};

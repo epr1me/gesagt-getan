@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('String')->callAndWrap('isBlank', array($context->callAndWrap('q', array($context->getAndWrap('this')->getAndWrap('node')))->callAndWrap('property', array('canonicalLink'))));};

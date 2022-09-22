@@ -1,0 +1,5 @@
+return function ($context) {return ((($_2=$context->getAndWrap('props')->getAndWrap('attributes')) instanceof \Neos\Eel\Context?$_2->unwrap():$_2)?($context->getAndWrap('Array')->callAndWrap('filter', array($context->getAndWrap('props')->getAndWrap('attributes'),function($attribute) use ($context) {
+            $context = clone $context;
+            $context->push($attribute,"attribute");
+            return ((($_0=$context->getAndWrap('attribute')) instanceof \Neos\Eel\Context?$_0->unwrap():$_0))!==((($_1=$context->getAndWrap('null')) instanceof \Neos\Eel\Context?$_1->unwrap():$_1));
+        }))):($context->wrap(array())));};

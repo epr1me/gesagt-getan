@@ -1,0 +1,1 @@
+return function ($context) {return (!(($_1=(!(($_0=$context->getAndWrap('documentNode')) instanceof \Neos\Eel\Context?$_0->unwrap():$_0))) instanceof \Neos\Eel\Context?$_1->unwrap():$_1));};

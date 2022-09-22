@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('StaticResource')->callAndWrap('uri', array('Neos.Neos','Public/Styles/RawContentMode.css'));};

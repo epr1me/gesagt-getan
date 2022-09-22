@@ -1,0 +1,12 @@
+
+Neos:
+  Imagine:
+    driver: Gd
+  Flow:
+    persistence:
+      backendOptions:
+        driver: pdo_mysql
+        dbname: __new__
+        user: root
+        password: root
+        host: '127.0.0.1:8889'

@@ -1,0 +1,33 @@
+/* prototype(Neos.Demo:Document.Fragment.Content.Footer) < prototype(Neos.Fusion:Component) {
+    renderer = Neos.Neos:ContentCollection {
+        nodePath = ${q(site).children('footer').property('_path')}
+    }
+}
+*/
+prototype(Neos.Demo:Document.Fragment.Content.Footer) < prototype(Neos.Neos:ContentComponent) {
+    renderer = Neos.Neos:ContentCollection {
+        nodePath = ${q(site).children('footer').property('_path')}
+    }
+
+    renderer = afx`
+        <div class="footer-img"><img src="/_Resources/Persistent/9/a/4/b/9a4ba52db300d5c8b2efa680c9db216670b84225/peepo-yes.png" width="200" /></div>
+        <div class="row footer">
+            <div class="col-sm-4 footer-left">
+                <p>Landesverband Steiermark<span>Moserhofgasse 47 Parterre</span><span>8010 Graz</span>
+                <span>Tel 0043 <a href="tel:0000">660 4543999</a></span>
+                <span>Mail <a href="mailto:abc@abc.com">office@aktiver-leben.at</a></span></p>
+            </div>
+            <div class="col-sm-4 footer-center">
+                <a href="#">Kontakt</a>
+                <a href="#">Datenschutz</a>
+                <a href="#">Impressum</a>
+                <a href="#">Partner werden</a>
+            </div>
+            <div class="col-sm-4 footer-right">
+                <img src="/_Resources/Persistent/d/7/8/7/d78712cc20b516bd4a9155eeb5c667f4bf9c118f/IMG_4587.jpg" width="100" />
+                <img src="/_Resources/Persistent/d/7/8/7/d78712cc20b516bd4a9155eeb5c667f4bf9c118f/IMG_4587.jpg" width="100" />
+                <img src="/_Resources/Persistent/d/7/8/7/d78712cc20b516bd4a9155eeb5c667f4bf9c118f/IMG_4587.jpg" width="100" />
+            </div>
+        </div>
+    `
+}

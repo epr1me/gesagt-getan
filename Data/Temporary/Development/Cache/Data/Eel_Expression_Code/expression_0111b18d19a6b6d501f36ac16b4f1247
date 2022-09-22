@@ -1,0 +1,1 @@
+return function ($context) {return ((($_0=$context->callAndWrap('q', array($context->getAndWrap('node')))->callAndWrap('property', array('linkTarget'))) instanceof \Neos\Eel\Context?$_0->unwrap():$_0)?('_blank'):('_self'));};

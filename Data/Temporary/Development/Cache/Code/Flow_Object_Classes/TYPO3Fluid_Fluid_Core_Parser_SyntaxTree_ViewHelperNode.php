@@ -1,0 +1,224 @@
+<?php 
+
+namespace TYPO3Fluid\Fluid\Core\Parser\SyntaxTree;
+
+/*
+ * This file belongs to the package "TYPO3 Fluid".
+ * See LICENSE.txt that was shipped with this package.
+ */
+
+use TYPO3Fluid\Fluid\Core\Parser\ParsingState;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use TYPO3Fluid\Fluid\Core\ViewHelper\ArgumentDefinition;
+use TYPO3Fluid\Fluid\Core\ViewHelper\ViewHelperInterface;
+
+/**
+ * Node which will call a ViewHelper associated with this node.
+ */
+class ViewHelperNode_Original extends AbstractNode
+{
+
+    /**
+     * @var string
+     */
+    protected $viewHelperClassName;
+
+    /**
+     * @var NodeInterface[]
+     */
+    protected $arguments = [];
+
+    /**
+     * @var ViewHelperInterface
+     */
+    protected $uninitializedViewHelper;
+
+    /**
+     * @var ArgumentDefinition[]
+     */
+    protected $argumentDefinitions = [];
+
+    /**
+     * @var string
+     */
+    protected $pointerTemplateCode;
+
+    /**
+     * Constructor.
+     *
+     * @param RenderingContextInterface $renderingContext a RenderingContext, provided by invoker
+     * @param string $namespace the namespace identifier of the ViewHelper.
+     * @param string $identifier the name of the ViewHelper to render, inside the namespace provided.
+     * @param NodeInterface[] $arguments Arguments of view helper - each value is a RootNode.
+     * @param ParsingState $state
+     */
+    public function __construct(RenderingContextInterface $renderingContext, $namespace, $identifier, array $arguments, ParsingState $state)
+    {
+        $resolver = $renderingContext->getViewHelperResolver();
+        $this->arguments = $arguments;
+        $this->viewHelperClassName = $resolver->resolveViewHelperClassName($namespace, $identifier);
+        $this->uninitializedViewHelper = $resolver->createViewHelperInstanceFromClassName($this->viewHelperClassName);
+        $this->uninitializedViewHelper->setViewHelperNode($this);
+        // Note: RenderingContext required here though replaced later. See https://github.com/TYPO3Fluid/Fluid/pull/93
+        $this->uninitializedViewHelper->setRenderingContext($renderingContext);
+        $this->argumentDefinitions = $resolver->getArgumentDefinitionsForViewHelper($this->uninitializedViewHelper);
+    }
+
+    /**
+     * @return ArgumentDefinition[]
+     */
+    public function getArgumentDefinitions()
+    {
+        return $this->argumentDefinitions;
+    }
+
+    /**
+     * Returns the attached (but still uninitialized) ViewHelper for this ViewHelperNode.
+     * We need this method because sometimes Interceptors need to ask some information from the ViewHelper.
+     *
+     * @return ViewHelperInterface
+     */
+    public function getUninitializedViewHelper()
+    {
+        return $this->uninitializedViewHelper;
+    }
+
+    /**
+     * Get class name of view helper
+     *
+     * @return string Class Name of associated view helper
+     */
+    public function getViewHelperClassName()
+    {
+        return $this->viewHelperClassName;
+    }
+
+    /**
+     * INTERNAL - only needed for compiling templates
+     *
+     * @return NodeInterface[]
+     */
+    public function getArguments()
+    {
+        return $this->arguments;
+    }
+
+    /**
+     * INTERNAL - only needed for compiling templates
+     *
+     * @param string $argumentName
+     * @return ArgumentDefinition
+     */
+    public function getArgumentDefinition($argumentName)
+    {
+        return $this->argumentDefinitions[$argumentName];
+    }
+
+    /**
+     * @param NodeInterface $childNode
+     */
+    public function addChildNode(NodeInterface $childNode)
+    {
+        parent::addChildNode($childNode);
+        $this->uninitializedViewHelper->setChildNodes($this->childNodes);
+    }
+
+    /**
+     * @param string $pointerTemplateCode
+     */
+    public function setPointerTemplateCode($pointerTemplateCode)
+    {
+        $this->pointerTemplateCode = $pointerTemplateCode;
+    }
+
+    /**
+     * Call the view helper associated with this object.
+     *
+     * First, it evaluates the arguments of the view helper.
+     *
+     * If the view helper implements \TYPO3Fluid\Fluid\Core\ViewHelper\ChildNodeAccessInterface,
+     * it calls setChildNodes(array childNodes) on the view helper.
+     *
+     * Afterwards, checks that the view helper did not leave a variable lying around.
+     *
+     * @param RenderingContextInterface $renderingContext
+     * @return string evaluated node after the view helper has been called.
+     */
+    public function evaluate(RenderingContextInterface $renderingContext)
+    {
+        return $renderingContext->getViewHelperInvoker()->invoke($this->uninitializedViewHelper, $this->arguments, $renderingContext);
+    }
+}
+
+#
+# Start of Flow generated Proxy code
+#
+/**
+ * Node which will call a ViewHelper associated with this node.
+ * @codeCoverageIgnore
+ */
+class ViewHelperNode extends ViewHelperNode_Original implements \Neos\Flow\ObjectManagement\Proxy\ProxyInterface {
+
+    use \Neos\Flow\ObjectManagement\Proxy\ObjectSerializationTrait;
+
+
+    /**
+     * Autogenerated Proxy Method
+     *
+     * Constructor.
+     *
+     * @param RenderingContextInterface $renderingContext a RenderingContext, provided by invoker
+     * @param string $namespace the namespace identifier of the ViewHelper.
+     * @param string $identifier the name of the ViewHelper to render, inside the namespace provided.
+     * @param NodeInterface[] $arguments Arguments of view helper - each value is a RootNode.
+     * @param ParsingState $state
+     */
+    public function __construct()
+    {
+        $arguments = func_get_args();
+
+        if (!array_key_exists(1, $arguments)) $arguments[1] = NULL;
+        if (!array_key_exists(2, $arguments)) $arguments[2] = NULL;
+        if (!array_key_exists(4, $arguments)) $arguments[4] = \Neos\Flow\Core\Bootstrap::$staticObjectManager->get('TYPO3Fluid\Fluid\Core\Parser\ParsingState');
+        if (!array_key_exists(0, $arguments)) throw new \Neos\Flow\ObjectManagement\Exception\UnresolvedDependenciesException('Missing required constructor argument $renderingContext in class ' . __CLASS__ . '. Note that constructor injection is only support for objects of scope singleton (and this is not a singleton) – for other scopes you must pass each required argument to the constructor yourself.', 1296143788);
+        if (!array_key_exists(1, $arguments)) throw new \Neos\Flow\ObjectManagement\Exception\UnresolvedDependenciesException('Missing required constructor argument $namespace in class ' . __CLASS__ . '. Note that constructor injection is only support for objects of scope singleton (and this is not a singleton) – for other scopes you must pass each required argument to the constructor yourself.', 1296143788);
+        if (!array_key_exists(2, $arguments)) throw new \Neos\Flow\ObjectManagement\Exception\UnresolvedDependenciesException('Missing required constructor argument $identifier in class ' . __CLASS__ . '. Note that constructor injection is only support for objects of scope singleton (and this is not a singleton) – for other scopes you must pass each required argument to the constructor yourself.', 1296143788);
+        if (!array_key_exists(3, $arguments)) throw new \Neos\Flow\ObjectManagement\Exception\UnresolvedDependenciesException('Missing required constructor argument $arguments in class ' . __CLASS__ . '. Note that constructor injection is only support for objects of scope singleton (and this is not a singleton) – for other scopes you must pass each required argument to the constructor yourself.', 1296143788);
+        if (!array_key_exists(4, $arguments)) throw new \Neos\Flow\ObjectManagement\Exception\UnresolvedDependenciesException('Missing required constructor argument $state in class ' . __CLASS__ . '. Note that constructor injection is only support for objects of scope singleton (and this is not a singleton) – for other scopes you must pass each required argument to the constructor yourself.', 1296143788);
+        parent::__construct(...$arguments);
+    }
+
+    /**
+     * Autogenerated Proxy Method
+     */
+    public function __sleep()
+    {
+            $result = NULL;
+        $this->Flow_Object_PropertiesToSerialize = array();
+        unset($this->Flow_Persistence_RelatedEntities);
+
+        $transientProperties = array (
+);
+        $propertyVarTags = array (
+  'viewHelperClassName' => 'string',
+  'arguments' => 'array<TYPO3Fluid\\Fluid\\Core\\Parser\\SyntaxTree\\NodeInterface>',
+  'uninitializedViewHelper' => 'TYPO3Fluid\\Fluid\\Core\\ViewHelper\\ViewHelperInterface',
+  'argumentDefinitions' => 'array<TYPO3Fluid\\Fluid\\Core\\ViewHelper\\ArgumentDefinition>',
+  'pointerTemplateCode' => 'string',
+  'childNodes' => 'array<TYPO3Fluid\\Fluid\\Core\\Parser\\SyntaxTree\\NodeInterface>',
+);
+        $result = $this->Flow_serializeRelatedEntities($transientProperties, $propertyVarTags);
+        return $result;
+    }
+
+    /**
+     * Autogenerated Proxy Method
+     */
+    public function __wakeup()
+    {
+
+        $this->Flow_setRelatedEntities();
+    }
+}
+# PathAndFilename: /Applications/MAMP/htdocs/neos-example/Packages/Libraries/typo3fluid/fluid/src/Core/Parser/SyntaxTree/ViewHelperNode.php
+#

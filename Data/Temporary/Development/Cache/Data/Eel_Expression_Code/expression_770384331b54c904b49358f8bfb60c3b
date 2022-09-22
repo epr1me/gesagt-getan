@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('site')->getAndWrap('context')->getAndWrap('currentSite')->getAndWrap('name');};

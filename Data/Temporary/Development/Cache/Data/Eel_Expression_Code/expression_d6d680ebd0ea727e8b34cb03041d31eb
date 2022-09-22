@@ -1,0 +1,1 @@
+return function ($context) {return ((($_0=$context->getAndWrap('site')->getAndWrap('context')->getAndWrap('inBackend')) instanceof \Neos\Eel\Context?$_0->unwrap():$_0)?(FALSE):(TRUE));};

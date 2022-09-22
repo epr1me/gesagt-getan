@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('Type')->callAndWrap('instance', array($context->callAndWrap('q', array($context->getAndWrap('node')))->callAndWrap('property', array('openGraphImage')),'Neos\Media\Domain\Model\ImageInterface'));};

@@ -1,0 +1,1 @@
+return function ($context) {return ((($_0=$context->getAndWrap('props')->getAndWrap('imageUri')) instanceof \Neos\Eel\Context?$_0->unwrap():$_0)?('main-header image'):('main-header'));};

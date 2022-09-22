@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('String')->callAndWrap('htmlspecialchars', array($context->getAndWrap('props')->getAndWrap('exception')->getAndWrap('asciiPreviewMessagePart')));};

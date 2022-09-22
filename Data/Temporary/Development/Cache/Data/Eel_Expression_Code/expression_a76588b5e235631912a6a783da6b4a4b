@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('Type')->callAndWrap('className', array($context->getAndWrap('props')->getAndWrap('exception')));};

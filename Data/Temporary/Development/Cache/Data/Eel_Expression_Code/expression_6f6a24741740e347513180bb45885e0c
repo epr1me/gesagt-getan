@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('Neos')->getAndWrap('Link')->callAndWrap('hasSupportedScheme', array($context->getAndWrap('props')->getAndWrap('canonicalLink')));};

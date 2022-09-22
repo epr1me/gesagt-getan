@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('Neos')->getAndWrap('Caching')->callAndWrap('nodeTypeTag', array('Neos.Neos:Document',$context->getAndWrap('documentNode')));};

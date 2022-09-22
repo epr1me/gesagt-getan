@@ -1,0 +1,27 @@
+{
+    "name": "neos/kickstarter",
+    "type": "neos-framework",
+    "description": "A simple generator for controller and views.",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "neos/flow": "~8.1.0",
+        "neos/fluid-adaptor": "~8.1.0",
+        "neos/utility-arrays": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neos\\Kickstarter\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Neos\\Kickstarter\\Tests\\": "Tests"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Neos.Kickstarter"
+        }
+    }
+}

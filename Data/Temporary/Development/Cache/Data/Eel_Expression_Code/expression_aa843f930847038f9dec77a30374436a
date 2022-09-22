@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('Neos')->getAndWrap('Node')->callAndWrap('labelForNode', array($context->getAndWrap('node')))->callAndWrap('properties', array('title','text'));};

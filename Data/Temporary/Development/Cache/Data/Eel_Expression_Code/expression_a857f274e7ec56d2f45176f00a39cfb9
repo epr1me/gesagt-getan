@@ -1,0 +1,1 @@
+return function ($context) {return (($_0=(($_1=$context->getAndWrap('node')) instanceof \Neos\Eel\Context?$_1->unwrap():$_1))?((($_2=$context->getAndWrap('String')->callAndWrap('length', array($context->getAndWrap('node')->getAndWrap('context')->getAndWrap('workspace')->getAndWrap('name')))) instanceof \Neos\Eel\Context?$_2->unwrap():$_2)):$_0);};

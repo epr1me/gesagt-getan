@@ -1,0 +1,22 @@
+##
+# "HeroBanner" element
+#
+prototype(Neos.Demo:Content.HeroBanner) < prototype(Neos.Neos:ContentComponent) {
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+    label = Neos.Neos:Editable {
+        property = 'label'
+    }
+    link = ${q(node).property('link')}
+    linkTarget = ${q(node).property('linkTarget') ? '_blank' : '_self'}
+    renderAsLink = ${site.context.inBackend ? false : true}
+
+    renderer = afx`
+        <div class="hero-banner">
+            {props.title}
+            <a @if.render={props.renderAsLink} href={props.link} target={props.linkTarget} class="link-arrow">{props.label}</a>
+            <div @if.render={!props.renderAsLink} class="link-arrow">{props.label}</div>
+        </div>
+    `
+}

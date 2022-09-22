@@ -1,0 +1,14 @@
+'Neos.Demo:Content.HeroBanner':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.NodeTypes.BaseMixins:TitleMixin': true
+    'Neos.Demo:Constraint.Content.Carousel': true
+    'Neos.Demo:Constraint.Content.Column': true
+    'Neos.Demo:Content.Headline': true
+    'Neos.Demo:Content.ArrowLink': true
+
+  ui:
+    label: Herobanner
+    icon: 'icon-header'
+    position: 100
+  

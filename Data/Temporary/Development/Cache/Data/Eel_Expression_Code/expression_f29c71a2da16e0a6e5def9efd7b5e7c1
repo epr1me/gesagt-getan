@@ -1,0 +1,1 @@
+return function ($context) {return ((($_0=$context->getAndWrap('Array')->callAndWrap('length', array($context->getAndWrap('this')->getAndWrap('urls')))) instanceof \Neos\Eel\Context?$_0->unwrap():$_0))>((($_1=0) instanceof \Neos\Eel\Context?$_1->unwrap():$_1));};

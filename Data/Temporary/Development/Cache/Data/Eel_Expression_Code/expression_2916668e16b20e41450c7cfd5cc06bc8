@@ -1,0 +1,1 @@
+return function ($context) {return $context->getAndWrap('String')->callAndWrap('stripTags', array($context->getAndWrap('value')));};
